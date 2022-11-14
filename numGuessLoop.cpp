@@ -52,7 +52,8 @@ int main() {
             // because my code wasn't working right
             float userGuessFloat = stof(userGuessString);
             // To make sure the user guess is not a decimal
-            if (userGuessFloat != static_cast<int>(userGuessFloat) || userGuessFloat < 0) {
+            if (userGuessFloat != static_cast<int>(userGuessFloat)
+            || userGuessFloat < 0) {
                 std::cout << "Please enter a valid integer from 0-9\n";
             } else {
                 // if statement to check if the user guess is between 0 to 9.
@@ -63,10 +64,12 @@ int main() {
                         std::cout << "You guessed correctly! Well done!\n";
                         break;
                     } else {
-                        std::cout << "You have not guessed correctly. Try again.\n";
+                        std::cout << "You have not guessed correctly. ";
+                        std::cout << "Try again.\n";
                     }
                 } else {
-                    std::cout << "Please enter a whole, positive number from 0-9.";
+                    std::cout << "Please enter a whole, positive ";
+                    std::cout << "number from 0-9.";
                 }
             }
         } catch (std::invalid_argument) {
